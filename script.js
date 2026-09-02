@@ -6,6 +6,40 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------------------------------------------------
+     0. MODE SOMBRE / CLAIR
+  --------------------------------------------------- */
+  const root         = document.documentElement;
+  const themeToggle  = document.getElementById("theme-toggle");
+  const themeColorEl = document.querySelector('meta[name="theme-color"]');
+
+  function applyThemeUI(theme) {
+    const isDark = theme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Activer le mode clair" : "Activer le mode sombre");
+    if (themeColorEl) themeColorEl.setAttribute("content", isDark ? "#0B1220" : "#F5F9FF");
+  }
+
+  // Le thème initial est déjà posé par le script inline dans <head> (anti-flash)
+  applyThemeUI(root.getAttribute("data-theme") || "light");
+
+  themeToggle.addEventListener("click", function () {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    applyThemeUI(next);
+  });
+
+  // Si l'utilisateur n'a jamais choisi manuellement, suit la préférence système
+  if (!localStorage.getItem("theme") && window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+      const theme = e.matches ? "dark" : "light";
+      root.setAttribute("data-theme", theme);
+      applyThemeUI(theme);
+    });
+  }
+
+
+  /* ---------------------------------------------------
      1. MENU MOBILE (burger)
   --------------------------------------------------- */
   const burger = document.getElementById("burger");
