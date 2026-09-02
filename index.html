@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Aller au contenu</a>
+
 <!-- ===========================
      HEADER & NAVIGATION
 =========================== -->
@@ -25,17 +27,17 @@
         <li><a href="#skills"     class="nav__link" data-nav-link>Compétences</a></li>
         <li><a href="#projects"   class="nav__link" data-nav-link>Projets</a></li>
         <li><a href="#experience" class="nav__link" data-nav-link>Parcours</a></li>
-        <li><a href="#contact"    class="nav__lsink" data-nav-link>Contact</a></li>
+        <li><a href="#contact"    class="nav__link" data-nav-link>Contact</a></li>
       </ul>
     </nav>
 
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <!-- ===========================
      HERO
@@ -66,7 +68,7 @@
       </div>
       <div class="hero__actions reveal">
         <a href="#contact" class="btn btn--primary">Me contacter</a>
-        <a href="assets/cv.jpeg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+        <a href="assets/cv.jpg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.jpg" class="btn btn--outline">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Télécharger mon CV
         </a>
@@ -111,7 +113,7 @@
     <div class="about__grid">
       <div class="about__photo reveal">
         <div class="about__photo-frame">
-          <img src="images/ChatGPT Image 27 juin 2026, 08_18_33.png" alt="ABDOULAYE Adou Aki Sourouya" >
+          <img src="images/photo-profil.jpg" alt="ABDOULAYE Adou Aki Sourouya" width="700" height="875" loading="lazy">
         </div>
         <div class="about__info-cards">
           <div class="info-card">
@@ -210,7 +212,7 @@
           <span class="skill-tag skill-tag--primary">API REST</span>
           <span class="skill-tag skill-tag--primary">CRUD</span>
           <span class="skill-tag">Authentification</span>
-          <span class="skill-tag">Cosommation d'API</span>
+          <span class="skill-tag">Consommation d'API</span>
           <span class="skill-tag">Interface dynamique</span>
           <span class="skill-tag">Système de panier</span>
           <span class="skill-tag">Système de routing</span>
@@ -249,7 +251,7 @@
       <!-- Projet 1 : E-commerce -->
       <article class="project-card reveal">
         <div class="project-card__img">
-          <img src="images/dasboard_ecom_perso.png" alt="Tableau de bord E-commerce" loading="lazy">
+          <img src="images/project-ecommerce.jpg" alt="Tableau de bord E-commerce" loading="lazy">
           <div class="project-card__overlay">
             <span class="project-card__tag">PHP &amp; Laravel</span>
           </div>
@@ -266,7 +268,7 @@
       <!-- Projet 2 : Connexion / authentification -->
       <article class="project-card reveal">
         <div class="project-card__img">
-          <img src="images/connexion_perso.png" alt="Interface de connexion" loading="lazy">
+          <img src="images/project-connexion.jpg" alt="Interface de connexion" loading="lazy">
           <div class="project-card__overlay">
             <span class="project-card__tag">Auth &amp; CRUD</span>
           </div>
@@ -283,7 +285,7 @@
       <!-- Projet 3 : Jeu Assassin Mouse -->
       <article class="project-card reveal">
         <div class="project-card__img">
-          <img src="images/fin_chat.png" alt="Jeu Assassin Mouse - en cours" loading="lazy">
+          <img src="images/project-assassin-mouse.jpg" alt="Jeu Assassin Mouse - le chat pourchasse les souris dans la forêt" loading="lazy">
           <div class="project-card__overlay">
             <span class="project-card__tag">Python / Pygame</span>
           </div>
@@ -467,7 +469,7 @@
           </a>
         </div>
 
-        <a href="assets/cv.jpeg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.pdf" class="btn btn--outline contact__cv-btn">
+        <a href="assets/cv.jpg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.jpg" class="btn btn--outline contact__cv-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Télécharger mon CV
         </a>
