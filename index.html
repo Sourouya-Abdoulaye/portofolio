@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABDOULAYE Adou Aki Sourouya — Développeur Web &amp; Mobile</title>
   <meta name="description" content="Portfolio d'ABDOULAYE Adou Aki Sourouya, développeur web et mobile junior basé à Sokodé, Togo.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ABDOULAYE Adou Aki Sourouya — Développeur Web &amp; Mobile">
+  <meta property="og:description" content="Portfolio d'ABDOULAYE Adou Aki Sourouya, développeur web et mobile junior basé à Sokodé, Togo.">
+  <meta property="og:image" content="images/photo-profil.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,10 +23,11 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
+  <script src="i18n.js" defer></script>
 </head>
 <body>
 
-<a href="#main" class="skip-link">Aller au contenu</a>
+<a href="#main" class="skip-link" data-i18n="skip.link">Aller au contenu</a>
 
 <!-- ===========================
      HEADER & NAVIGATION
@@ -32,21 +38,23 @@
 
     <nav class="nav" id="nav">
       <ul class="nav__list">
-        <li><a href="#about"      class="nav__link" data-nav-link>À propos</a></li>
-        <li><a href="#skills"     class="nav__link" data-nav-link>Compétences</a></li>
-        <li><a href="#projects"   class="nav__link" data-nav-link>Projets</a></li>
-        <li><a href="#experience" class="nav__link" data-nav-link>Parcours</a></li>
-        <li><a href="#contact"    class="nav__link" data-nav-link>Contact</a></li>
+        <li><a href="#about"      class="nav__link" data-nav-link data-i18n="nav.about">À propos</a></li>
+        <li><a href="#skills"     class="nav__link" data-nav-link data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#projects"   class="nav__link" data-nav-link data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#experience" class="nav__link" data-nav-link data-i18n="nav.experience">Parcours</a></li>
+        <li><a href="#contact"    class="nav__link" data-nav-link data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
+      <button class="lang-toggle" id="lang-toggle" type="button" data-i18n-aria="lang.toggleAria" aria-label="Switch to English">EN</button>
+
       <button class="theme-toggle" id="theme-toggle" aria-label="Activer le mode sombre" aria-pressed="false">
         <svg class="theme-toggle__icon theme-toggle__icon--sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
         <svg class="theme-toggle__icon theme-toggle__icon--moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.6 6.6 0 0 0 10.5 10.5Z"/></svg>
       </button>
 
-      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+      <button class="burger" id="burger" data-i18n-aria="burger.open" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -64,11 +72,11 @@
 
     <div class="hero__text">
       <p class="hero__eyebrow reveal">
-        <span class="mono">&lt;/&gt;</span> Bonjour, je suis
+        <span class="mono">&lt;/&gt;</span> <span data-i18n="hero.eyebrow">Bonjour, je suis</span>
       </p>
       <h1 class="hero__name reveal">ABDOULAYE<br>Adou Aki Sourouya</h1>
-      <h2 class="hero__title reveal">Développeur Web &amp; Mobile Junior</h2>
-      <p class="hero__tagline reveal">
+      <h2 class="hero__title reveal" data-i18n="hero.title">Développeur Web &amp; Mobile Junior</h2>
+      <p class="hero__tagline reveal" data-i18n="hero.tagline">
         Étudiant passionné à l'IFNTI de Sokodé, je conçois des applications web et mobiles
         performantes — du frontend élégant au backend robuste. Ouvert aux opportunités
         internationales et au travail à distance.
@@ -79,18 +87,18 @@
           Sokodé, Togo
         </span>
         <span class="badge badge--green">
-          <span class="pulse"></span> Disponible pour missions freelance
+          <span class="pulse"></span> <span data-i18n="hero.badge.available">Disponible pour missions freelance</span>
         </span>
         <span class="badge badge--purple">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2Zm0 7L4.24 5.5 12 2.02l7.76 3.48L12 9ZM5 13.18v3.6c0 1.5 3.13 2.72 7 2.72s7-1.22 7-2.72v-3.6l-7 3.19-7-3.19Z"/></svg>
-          Entrepreneur &amp; Formateur
+          <span data-i18n="hero.badge.entrepreneur">Entrepreneur &amp; Formateur</span>
         </span>
       </div>
       <div class="hero__actions reveal">
-        <a href="#contact" class="btn btn--primary">Me contacter</a>
+        <a href="#contact" class="btn btn--primary" data-i18n="hero.cta.contact">Me contacter</a>
         <a href="assets/cv.jpg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.jpg" class="btn btn--outline">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Télécharger mon CV
+          <span data-i18n="hero.cta.cv">Télécharger mon CV</span>
         </a>
       </div>
     </div>
@@ -106,9 +114,9 @@
         </div>
         <pre class="code-window__body"><code><span class="tok-key">class</span> <span class="tok-var">Developer</span>:
   <span class="tok-prop">nom</span>       = <span class="tok-str">"ABDOULAYE Sourouya"</span>
-  <span class="tok-prop">role</span>      = <span class="tok-str">"Web &amp; Mobile Dev"</span>
+  <span class="tok-prop">role</span>      = <span class="tok-str" data-i18n="hero.code.role">"Web &amp; Mobile Dev"</span>
   <span class="tok-prop">ecole</span>     = <span class="tok-str">"IFNTI Sokodé"</span>
-  <span class="tok-prop">annee</span>     = <span class="tok-str">"Licence 2 en cours"</span>
+  <span class="tok-prop">annee</span>     = <span class="tok-str" data-i18n="hero.code.annee">"Licence 2 en cours"</span>
   <span class="tok-prop">stack</span>     = [
     <span class="tok-str">"Python"</span>, <span class="tok-str">"PHP"</span>,
     <span class="tok-str">"Laravel"</span>, <span class="tok-str">"JAVA"</span>,
@@ -127,8 +135,8 @@
 =========================== -->
 <section class="section section--alt" id="about">
   <div class="container">
-    <p class="section__eyebrow reveal"><span class="mono">// 01</span> À propos</p>
-    <h2 class="section__title reveal">Qui suis-je</h2>
+    <p class="section__eyebrow reveal"><span class="mono">// 01</span> <span data-i18n="about.eyebrow">À propos</span></p>
+    <h2 class="section__title reveal" data-i18n="about.title">Qui suis-je</h2>
 
     <div class="about__grid">
       <div class="about__photo reveal">
@@ -138,33 +146,33 @@
         <div class="about__info-cards">
           <div class="info-card">
             <span class="info-card__value">2+</span>
-            <span class="info-card__label">Ans de code</span>
+            <span class="info-card__label" data-i18n="about.info.years.label">Ans de code</span>
           </div>
           <div class="info-card">
             <span class="info-card__value">7+</span>
-            <span class="info-card__label">Projets réalisés</span>
+            <span class="info-card__label" data-i18n="about.info.projects.label">Projets réalisés</span>
           </div>
         </div>
       </div>
 
       <div class="about__content">
-        <p class="reveal">
+        <p class="reveal" data-i18n-html="about.p1">
           Je suis <strong>ABDOULAYE Adou Aki Sourouya</strong>, étudiant en deuxième année de Licence
           en développement web et mobile à l'<strong>IFNTI de Sokodé</strong>, au Togo. Passionné par la
           création d'applications numériques depuis mes débuts, j'aime construire des solutions concrètes
           à des problèmes réels.
         </p>
-        <p class="reveal">
+        <p class="reveal" data-i18n-html="about.p2">
           Mon parcours académique m'a permis de maîtriser aussi bien le frontend (HTML, CSS, JavaScript,TypeScript)
           que le backend (Python(console), PHP, Laravel, JAVA(console)). J'ai réalisé des projets variés : gestion
           immobilière, clone e-commerce, jeux vidéo, systèmes CRUD, et bien d'autres.
         </p>
-        <p class="reveal">
+        <p class="reveal" data-i18n-html="about.p3">
           Mon objectif est de collaborer avec des équipes internationales en remote, apporter
           de la valeur à travers des applications fiables et bien conçues, et continuer à progresser
           en tant que développeur full-stack.
         </p>
-        <p class="reveal">
+        <p class="reveal" data-i18n-html="about.p4">
           Au-delà du code, je suis aussi <strong>entrepreneur</strong> : j'aime construire mes propres
           idées et les transformer en produits concrets. Je consacre également du temps à
           <strong>former</strong> d'autres apprenants et à transmettre ce que j'apprends en chemin.
@@ -194,19 +202,19 @@
 =========================== -->
 <section class="section" id="skills">
   <div class="container">
-    <p class="section__eyebrow reveal"><span class="mono">// 02</span> Compétences</p>
-    <h2 class="section__title reveal">Ce que je maîtrise</h2>
+    <p class="section__eyebrow reveal"><span class="mono">// 02</span> <span data-i18n="skills.eyebrow">Compétences</span></p>
+    <h2 class="section__title reveal" data-i18n="skills.title">Ce que je maîtrise</h2>
 
     <div class="skills__categories">
 
       <div class="skill-category reveal">
         <h3 class="skill-category__title">
-          <span class="skill-category__icon">🌐</span> Langages
+          <span class="skill-category__icon">🌐</span> <span data-i18n="skills.cat.languages">Langages</span>
         </h3>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
           <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Langage C</span>
+          <span class="skill-tag" data-i18n="skill.clang">Langage C</span>
           <span class="skill-tag">Java</span>
           <span class="skill-tag">TypeScript</span>
           <span class="skill-tag">JavaScript</span>
@@ -217,7 +225,7 @@
 
       <div class="skill-category reveal">
         <h3 class="skill-category__title">
-          <span class="skill-category__icon">⚙️</span> Frameworks &amp; Outils
+          <span class="skill-category__icon">⚙️</span> <span data-i18n="skills.cat.frameworks">Frameworks &amp; Outils</span>
         </h3>
         <div class="skill-tags">
           <span class="skill-tag skill-tag--primary">Laravel</span>
@@ -231,22 +239,22 @@
 
       <div class="skill-category reveal">
         <h3 class="skill-category__title">
-          <span class="skill-category__icon">🔌</span> Web &amp; API
+          <span class="skill-category__icon">🔌</span> <span data-i18n="skills.cat.webapi">Web &amp; API</span>
         </h3>
         <div class="skill-tags">
           <span class="skill-tag skill-tag--primary">API REST</span>
           <span class="skill-tag skill-tag--primary">CRUD</span>
-          <span class="skill-tag">Authentification</span>
-          <span class="skill-tag">Consommation d'API</span>
-          <span class="skill-tag">Interface dynamique</span>
-          <span class="skill-tag">Système de panier</span>
-          <span class="skill-tag">Système de routing</span>
+          <span class="skill-tag" data-i18n="skill.auth">Authentification</span>
+          <span class="skill-tag" data-i18n="skill.apiconsume">Consommation d'API</span>
+          <span class="skill-tag" data-i18n="skill.dynui">Interface dynamique</span>
+          <span class="skill-tag" data-i18n="skill.cart">Système de panier</span>
+          <span class="skill-tag" data-i18n="skill.routing">Système de routing</span>
         </div>
       </div>
 
       <div class="skill-category reveal">
         <h3 class="skill-category__title">
-          <span class="skill-category__icon">🛠️</span> Environnement
+          <span class="skill-category__icon">🛠️</span> <span data-i18n="skills.cat.env">Environnement</span>
         </h3>
         <div class="skill-tags">
           <span class="skill-tag">Git</span>
@@ -268,8 +276,8 @@
 =========================== -->
 <section class="section section--alt" id="projects">
   <div class="container">
-    <p class="section__eyebrow reveal"><span class="mono">// 03</span> Projets</p>
-    <h2 class="section__title reveal">Réalisations</h2>
+    <p class="section__eyebrow reveal"><span class="mono">// 03</span> <span data-i18n="projects.eyebrow">Projets</span></p>
+    <h2 class="section__title reveal" data-i18n="projects.title">Réalisations</h2>
 
     <div class="projects__grid">
 
@@ -282,19 +290,19 @@
           </div>
         </div>
         <div class="project-card__body">
-          <h3>Clone E-commerce</h3>
-          <p>Site complet de vente en ligne avec gestion des produits, des utilisateurs et du parcours d'achat. Interface admin, système d'authentification et tableau de bord analytique.</p>
+          <h3 data-i18n="project1.title">Clone E-commerce</h3>
+          <p data-i18n="project1.desc">Site complet de vente en ligne avec gestion des produits, des utilisateurs et du parcours d'achat. Interface admin, système d'authentification et tableau de bord analytique.</p>
           <div class="project-card__stack">
             <span>PHP</span><span>Laravel</span><span>JavaScript</span><span>MySQL</span>
           </div>
           <div class="project-card__links">
             <a href="#" class="project-link" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.66.79.55A11.04 11.04 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
-              Code
+              <span data-i18n="link.code">Code</span>
             </a>
             <a href="#" class="project-link project-link--demo" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Démo
+              <span data-i18n="link.demo">Démo</span>
             </a>
           </div>
         </div>
@@ -309,19 +317,19 @@
           </div>
         </div>
         <div class="project-card__body">
-          <h3>Gestion Immobilière</h3>
-          <p>Application de gestion d'activités internes avec authentification sécurisée, gestion des employés et des biens. Architecture MVC avec Laravel et panneau d'administration complet.</p>
+          <h3 data-i18n="project2.title">Gestion Immobilière</h3>
+          <p data-i18n="project2.desc">Application de gestion d'activités internes avec authentification sécurisée, gestion des employés et des biens. Architecture MVC avec Laravel et panneau d'administration complet.</p>
           <div class="project-card__stack">
             <span>Laravel</span><span>CRUD</span><span>Auth</span><span>MySQL</span>
           </div>
           <div class="project-card__links">
             <a href="#" class="project-link" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.66.79.55A11.04 11.04 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
-              Code
+              <span data-i18n="link.code">Code</span>
             </a>
             <a href="#" class="project-link project-link--demo" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Démo
+              <span data-i18n="link.demo">Démo</span>
             </a>
           </div>
         </div>
@@ -336,19 +344,19 @@
           </div>
         </div>
         <div class="project-card__body">
-          <h3>Assassin Mouse</h3>
-          <p>Jeu vidéo 2D développé avec Python et Pygame. Un chat doit attraper des souris dans un environnement de forêt animé. Gère les collisions, les niveaux et les scores.</p>
+          <h3 data-i18n="project3.title">Assassin Mouse</h3>
+          <p data-i18n="project3.desc">Jeu vidéo 2D développé avec Python et Pygame. Un chat doit attraper des souris dans un environnement de forêt animé. Gère les collisions, les niveaux et les scores.</p>
           <div class="project-card__stack">
             <span>Python</span><span>Pygame</span><span>Game Logic</span>
           </div>
           <div class="project-card__links">
             <a href="#" class="project-link" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.66.79.55A11.04 11.04 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
-              Code
+              <span data-i18n="link.code">Code</span>
             </a>
             <a href="#" class="project-link project-link--demo" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Démo
+              <span data-i18n="link.demo">Démo</span>
             </a>
           </div>
         </div>
@@ -419,48 +427,48 @@
 =========================== -->
 <section class="section" id="experience">
   <div class="container">
-    <p class="section__eyebrow reveal"><span class="mono">// 04</span> Parcours</p>
-    <h2 class="section__title reveal">Formation &amp; Expérience</h2>
+    <p class="section__eyebrow reveal"><span class="mono">// 04</span> <span data-i18n="experience.eyebrow">Parcours</span></p>
+    <h2 class="section__title reveal" data-i18n-html="experience.title">Formation &amp; Expérience</h2>
 
     <div class="timeline">
 
       <div class="timeline__item reveal">
-        <div class="timeline__date">2024 — En cours</div>
+        <div class="timeline__date" data-i18n="exp1.date">2024 — En cours</div>
         <div class="timeline__content">
-          <span class="timeline__badge">Formation</span>
-          <h3>Licence — Développement Web &amp; Mobile</h3>
-          <p class="timeline__org">IFNTI — Institut de Formation aux Normes et Technologies de l’Informatique . Sokodé, Togo</p>
-          <p> <strong>Deuxième année de licence </strong> spécialisée en développement web et mobile. Apprentissage approfondi de Python, PHP, Laravel, JavaScript, bases de données et API REST.</p>
+          <span class="timeline__badge" data-i18n="exp1.badge">Formation</span>
+          <h3 data-i18n-html="exp1.title">Licence — Développement Web &amp; Mobile</h3>
+          <p class="timeline__org" data-i18n="exp1.org">IFNTI — Institut de Formation aux Normes et Technologies de l’Informatique . Sokodé, Togo</p>
+          <p data-i18n-html="exp1.desc"> <strong>Deuxième année de licence </strong> spécialisée en développement web et mobile. Apprentissage approfondi de Python, PHP, Laravel, JavaScript, bases de données et API REST.</p>
         </div>
       </div>
 
       <div class="timeline__item reveal">
-        <div class="timeline__date">Stage</div>
+        <div class="timeline__date" data-i18n="exp2.date">Stage</div>
         <div class="timeline__content">
-          <span class="timeline__badge timeline__badge--green">Expérience</span>
-          <h3>Diagramme Microfinance — Stage(Licence 1) - 2024-2025</h3>
-          <p class="timeline__org">Projet de stage académique</p>
-          <p>Conception et modélisation d'un système de gestion pour une institution de microfinance. Réalisation des diagrammes UML, analyse des besoins et proposition d'architecture technique.</p>
+          <span class="timeline__badge timeline__badge--green" data-i18n="exp2.badge">Expérience</span>
+          <h3 data-i18n="exp2.title">Diagramme Microfinance — Stage (Licence 1) - 2024-2025</h3>
+          <p class="timeline__org" data-i18n="exp2.org">Projet de stage académique</p>
+          <p data-i18n="exp2.desc">Conception et modélisation d'un système de gestion pour une institution de microfinance. Réalisation des diagrammes UML, analyse des besoins et proposition d'architecture technique.</p>
         </div>
       </div>
 
       <div class="timeline__item reveal">
-        <div class="timeline__date">Projets personnels</div>
+        <div class="timeline__date" data-i18n="exp3.date">Projets personnels</div>
         <div class="timeline__content">
           <span class="timeline__badge timeline__badge--blue">Freelance</span>
-          <h3>Développeur Full-Stack — Projets indépendants</h3>
-          <p class="timeline__org">Auto-entrepreneur</p>
-          <p>Réalisation de plusieurs applications complètes : clone e-commerce, gestion immobilière, jeux vidéo en Python, interfaces CRUD avec Laravel. Couverture du cycle complet de développement.</p>
+          <h3 data-i18n="exp3.title">Développeur Full-Stack — Projets indépendants</h3>
+          <p class="timeline__org" data-i18n="exp3.org">Auto-entrepreneur</p>
+          <p data-i18n="exp3.desc">Réalisation de plusieurs applications complètes : clone e-commerce, gestion immobilière, jeux vidéo en Python, interfaces CRUD avec Laravel. Couverture du cycle complet de développement.</p>
         </div>
       </div>
 
       <div class="timeline__item reveal">
-        <div class="timeline__date">Langues</div>
+        <div class="timeline__date" data-i18n="exp4.date">Langues</div>
         <div class="timeline__content">
           <span class="timeline__badge">Soft Skills</span>
-          <h3>Langues &amp; Intérêts</h3>
-          <p class="timeline__org">Profil international</p>
-          <p>Français · Anglais (intermédiaire). Intérêts : développement web &amp; mobile, nouvelles technologies, projets numériques, innovation et football.</p>
+          <h3 data-i18n-html="exp4.title">Langues &amp; Intérêts</h3>
+          <p class="timeline__org" data-i18n="exp4.org">Profil international</p>
+          <p data-i18n-html="exp4.desc">Français · Anglais (intermédiaire). Intérêts : développement web &amp; mobile, nouvelles technologies, projets numériques, innovation et football.</p>
         </div>
       </div>
 
@@ -474,10 +482,10 @@
 =========================== -->
 <section class="section section--alt" id="contact">
   <div class="container">
-    <p class="section__eyebrow reveal"><span class="mono">// 05</span> Contact</p>
-    <h2 class="section__title reveal">Travaillons ensemble</h2>
-    <p class="contact__text reveal">
-      Disponible pour des missions freelance,collaboration ou des opportunités à distance.
+    <p class="section__eyebrow reveal"><span class="mono">// 05</span> <span data-i18n="contact.eyebrow">Contact</span></p>
+    <h2 class="section__title reveal" data-i18n="contact.title">Travaillons ensemble</h2>
+    <p class="contact__text reveal" data-i18n="contact.text">
+      Disponible pour des missions freelance, une collaboration ou des opportunités à distance.
       Envoyez-moi un message, je réponds rapidement.
     </p>
 
@@ -491,7 +499,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6Z"/><path d="m2 7 10 6 10-6"/></svg>
             </span>
             <span class="contact-link__text">
-              <span class="contact-link__label">Email</span>
+              <span class="contact-link__label" data-i18n="contact.link.email.label">Email</span>
               <span class="contact-link__value">akisouroyaabdoulaye@gmail.com</span>
             </span>
           </a>
@@ -500,7 +508,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </span>
             <span class="contact-link__text">
-              <span class="contact-link__label">Téléphone</span>
+              <span class="contact-link__label" data-i18n="contact.link.phone.label">Téléphone</span>
               <span class="contact-link__value">71 85 29 14</span>
             </span>
           </a>
@@ -509,7 +517,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.16.69-3.83-1.34-3.83-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.36.77 1.07.77 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.66.79.55A11.04 11.04 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
             </span>
             <span class="contact-link__text">
-              <span class="contact-link__label">GitHub</span>
+              <span class="contact-link__label" data-i18n="contact.link.github.label">GitHub</span>
               <span class="contact-link__value">https://github.com/Sourouya-Abdoulaye</span>
             </span>
           </a>
@@ -518,7 +526,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
             </span>
             <span class="contact-link__text">
-              <span class="contact-link__label">LinkedIn</span>
+              <span class="contact-link__label" data-i18n="contact.link.linkedin.label">LinkedIn</span>
               <span class="contact-link__value">https://www.linkedin.com/in/Sourouya-Abdoulaye/</span>
             </span>
           </a>
@@ -526,7 +534,7 @@
 
         <a href="assets/cv.jpg" download="CV_ABDOULAYE_Adou_Aki_Sourouya.jpg" class="btn btn--outline contact__cv-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Télécharger mon CV
+          <span data-i18n="hero.cta.cv">Télécharger mon CV</span>
         </a>
       </div>
 
@@ -534,38 +542,38 @@
       <form class="contact-form reveal" id="contact-form" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Nom complet <span class="required">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name">
+            <label for="name"><span data-i18n="form.name.label">Nom complet</span> <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" data-i18n-placeholder="form.name.placeholder" required autocomplete="name">
             <span class="form-error" data-error-for="name"></span>
           </div>
           <div class="form-group">
-            <label for="email">Adresse email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required autocomplete="email">
+            <label for="email"><span data-i18n="form.email.label">Adresse email</span> <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.com" data-i18n-placeholder="form.email.placeholder" required autocomplete="email">
             <span class="form-error" data-error-for="email"></span>
           </div>
         </div>
 
         <div class="form-group">
-          <label for="subject">Sujet <span class="required">*</span></label>
-          <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+          <label for="subject"><span data-i18n="form.subject.label">Sujet</span> <span class="required">*</span></label>
+          <input type="text" id="subject" name="subject" placeholder="Objet de votre message" data-i18n-placeholder="form.subject.placeholder" required>
           <span class="form-error" data-error-for="subject"></span>
         </div>
 
         <div class="form-group">
-          <label for="message">Message <span class="required">*</span></label>
-          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          <label for="message"><span data-i18n="form.message.label">Message</span> <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." data-i18n-placeholder="form.message.placeholder" required></textarea>
           <span class="form-error" data-error-for="message"></span>
         </div>
 
         <button type="submit" class="btn btn--primary contact-form__submit">
-          Envoyer le message
+          <span data-i18n="form.submit">Envoyer le message</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
 
-        <p class="contact-form__note">
+        <p class="contact-form__note" data-i18n="form.note">
           Le message sera envoyé via votre application email.
         </p>
-        <p class="contact-form__success" id="form-success" role="status" aria-live="polite">
+        <p class="contact-form__success" id="form-success" role="status" aria-live="polite" data-i18n="form.success">
           ✅ Votre messagerie s'ouvre avec le message pré-rempli. Merci !
         </p>
       </form>
@@ -581,8 +589,8 @@
 =========================== -->
 <footer class="footer">
   <div class="container footer__inner">
-    <p>&copy; <span id="year"></span> ABDOULAYE Adou Aki Sourouya — Tous droits réservés.</p>
-    <p class="footer__made">Conçu et codé avec soin · Sokodé, Togo 🇹🇬</p>
+    <p>&copy; <span id="year"></span> ABDOULAYE Adou Aki Sourouya — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+    <p class="footer__made" data-i18n="footer.made">Conçu et codé avec soin · Sokodé, Togo 🇹🇬</p>
   </div>
 </footer>
 

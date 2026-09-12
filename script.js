@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function applyThemeUI(theme) {
     const isDark = theme === "dark";
     themeToggle.setAttribute("aria-pressed", String(isDark));
-    themeToggle.setAttribute("aria-label", isDark ? "Activer le mode clair" : "Activer le mode sombre");
+    const enableDarkLabel  = window.t ? window.t("theme.enableDark")  : "Activer le mode sombre";
+    const enableLightLabel = window.t ? window.t("theme.enableLight") : "Activer le mode clair";
+    themeToggle.setAttribute("aria-label", isDark ? enableLightLabel : enableDarkLabel);
     if (themeColorEl) themeColorEl.setAttribute("content", isDark ? "#0B1220" : "#F5F9FF");
   }
 
@@ -143,26 +145,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
   }
 
+  function msg(key, fallback) {
+    return window.t ? window.t(key) : fallback;
+  }
+
   function validate() {
     let ok = true;
 
     if (fields.name.value.trim().length < 2) {
-      setError("name", "Merci d'indiquer votre nom (min. 2 caractères).");
+      setError("name", msg("form.error.name", "Merci d'indiquer votre nom (min. 2 caractères)."));
       ok = false;
     } else { clearError("name"); }
 
     if (!isEmail(fields.email.value.trim())) {
-      setError("email", "Adresse email invalide.");
+      setError("email", msg("form.error.email", "Adresse email invalide."));
       ok = false;
     } else { clearError("email"); }
 
     if (fields.subject.value.trim().length < 3) {
-      setError("subject", "Merci d'indiquer un sujet.");
+      setError("subject", msg("form.error.subject", "Merci d'indiquer un sujet."));
       ok = false;
     } else { clearError("subject"); }
 
     if (fields.message.value.trim().length < 10) {
-      setError("message", "Message trop court (min. 10 caractères).");
+      setError("message", msg("form.error.message", "Message trop court (min. 10 caractères)."));
       ok = false;
     } else { clearError("message"); }
 
@@ -190,8 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = fields.message.value.trim();
 
     const body =
-      "Nom : "    + name    + "\n" +
-      "Email : "  + email   + "\n\n" +
+      msg("form.mailto.name", "Nom")   + " : " + name    + "\n" +
+      msg("form.mailto.email", "Email") + " : " + email   + "\n\n" +
       message;
 
     window.location.href =

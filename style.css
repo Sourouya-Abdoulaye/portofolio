@@ -108,6 +108,9 @@ button { font: inherit; }
 
 .header__actions { display: flex; align-items: center; gap: 4px; }
 
+.lang-toggle { display: flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 10px; border-radius: 999px; background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); font-family: var(--font-mono); font-size: .78rem; font-weight: 700; letter-spacing: .03em; cursor: pointer; transition: background var(--ease), border-color var(--ease), transform var(--ease), color var(--ease); }
+.lang-toggle:hover { border-color: var(--color-primary-lt); color: var(--color-primary-dk); transform: translateY(-1px); }
+
 .theme-toggle { position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); cursor: pointer; transition: background var(--ease), border-color var(--ease), transform var(--ease); }
 .theme-toggle:hover { border-color: var(--color-primary-lt); transform: translateY(-1px); }
 .theme-toggle__icon { position: absolute; transition: opacity .25s ease, transform .35s ease; }
