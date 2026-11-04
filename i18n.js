@@ -5,8 +5,8 @@
 
 const I18N = {
   fr: {
-    "meta.title": "ABDOULAYE Adou Aki Sourouya — Développeur Web & Mobile",
-    "meta.description": "Portfolio d'ABDOULAYE Adou Aki Sourouya, développeur web et mobile junior basé à Sokodé, Togo.",
+    "meta.title": "ABDOULAYE Adou Aki Sourouya — Développeur Full Stack",
+    "meta.description": "Portfolio d'ABDOULAYE Adou Aki Sourouya, développeur full stack basé à Sokodé, Togo.",
 
     "skip.link": "Aller au contenu",
 
@@ -23,13 +23,13 @@ const I18N = {
     "lang.toggleLabel": "EN",
 
     "hero.eyebrow": "Bonjour, je suis",
-    "hero.title": "Développeur Web &amp; Mobile Junior",
+    "hero.title": "Développeur Full Stack",
     "hero.tagline": "Étudiant passionné à l'IFNTI de Sokodé, je conçois des applications web et mobiles performantes — du frontend élégant au backend robuste. Ouvert aux opportunités internationales et au travail à distance.",
     "hero.badge.available": "Disponible pour missions freelance",
     "hero.badge.entrepreneur": "Entrepreneur &amp; Formateur",
     "hero.cta.contact": "Me contacter",
     "hero.cta.cv": "Télécharger mon CV",
-    "hero.code.role": "\"Web &amp; Mobile Dev\"",
+    "hero.code.role": "\"Full Stack Dev\"",
     "hero.code.annee": "\"Licence 3 en cours\"",
 
     "about.eyebrow": "À propos",
@@ -117,8 +117,8 @@ const I18N = {
   },
 
   en: {
-    "meta.title": "ABDOULAYE Adou Aki Sourouya — Web & Mobile Developer",
-    "meta.description": "Portfolio of ABDOULAYE Adou Aki Sourouya, a junior web and mobile developer based in Sokodé, Togo.",
+    "meta.title": "ABDOULAYE Adou Aki Sourouya — Full Stack Developer",
+    "meta.description": "Portfolio of ABDOULAYE Adou Aki Sourouya, a full stack developer based in Sokodé, Togo.",
 
     "skip.link": "Skip to content",
 
@@ -135,13 +135,13 @@ const I18N = {
     "lang.toggleLabel": "FR",
 
     "hero.eyebrow": "Hi, I'm",
-    "hero.title": "Junior Web &amp; Mobile Developer",
+    "hero.title": "Full Stack Developer",
     "hero.tagline": "A passionate student at IFNTI in Sokodé, I build high-performing web and mobile applications — from elegant frontends to robust backends. Open to international opportunities and remote work.",
     "hero.badge.available": "Available for freelance work",
     "hero.badge.entrepreneur": "Entrepreneur &amp; Trainer",
     "hero.cta.contact": "Contact me",
     "hero.cta.cv": "Download my CV",
-    "hero.code.role": "\"Web &amp; Mobile Dev\"",
+    "hero.code.role": "\"Full Stack Dev\"",
     "hero.code.annee": "\"3rd year (ongoing)\"",
 
     "about.eyebrow": "About",
